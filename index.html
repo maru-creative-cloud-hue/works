@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lita Cafe - リタカフェ</title>
+        <meta name="description" content="ほっとひと息できる、癒しと開放感のあるカフェ">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!--リセットCSS-->
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <!--slick-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <!-- bxSlider -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+        <!--自作のCSS-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet"  href="css/mobile.css" media="(max-width: 500px)">		
+        <!--ファビコン-->
+        <link rel="icon" href="img/favi-icon.ico">
+        <!--font awesome-->
+        <script src="https://kit.fontawesome.com/e63ff7a4be.js" crossorigin="anonymous" defer></script>
+        <!--Adobe Fonts-->
+        <script defer>
+        (function(d) {
+            var config = {
+            kitId: 'hww5yfi',
+            scriptTimeout: 3000,
+            async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+        </script>
+        <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>	
+        <!--slick-->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+        <!--stickyfill.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js" defer></script>
+        <!-- bxSlider -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js" defer></script>
+        <!--自作のJS-->
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+        <!-- 画面遷移用 -->
+        <div id="splash" class="splash">
+            <div class="splash-logo" id="splash-logo">
+                <img src="img/logo.png" alt="リタカフェロゴ" class="fadeUp" width="341px" height="153px">
+            </div>
+        </div>
+        <div class="splash-bg">
+        </div>
+		
+        <!-- -画面遷移後の画面 -->
+        <div id="splash-container" class="splash-container">
+            <!-- ヘッダー -->
+            <header class="header" id="header">
+                <div class="header-logo c-logo">
+                    <a href="index.html"><img src="img/logo.jpg" loading="lazy" width="253px" height="113px"></a>
+                </div>
+                <div class="header-sns">
+                    <ul class="header-sns-list">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
+                    </ul>
+                </div>
+                <div class="header-menu">
+                    <div class="header-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="header-nav" id="nav">
+                        <div class="header-nav-logo c-logo">
+                            <a href="index.html"><img src="img/logo.jpg" loading="lazy" width="253px" height="113px"></a>
+                        </div>
+                        <div class="header-nav-container">
+                            <ul class="header-nav-toc">
+                                <li class="header-nav-toc-item c-toc current">
+                                    <a href="index.html">
+                                        <h2 class="c-toc-en">TOP</h2>
+                                        <p class="c-toc-jp">トップ</p>
+                                    </a>
+                                </li>
+                                <li class="header-nav-toc-item c-toc">
+                                    <a href="#">
+                                        <h2 class="c-toc-en">CONCEPT</h2>
+                                        <p class="c-toc-jp">コンセプト</p>
+                                    </a>
+                                </li>
+                                <li class="header-nav-toc-item c-toc">
+                                    <a href="#">
+                                        <h2 class="c-toc-en">NEWS</h2>
+                                        <p class="c-toc-jp">ニュース</p>
+                                    </a>
+                                </li>
+                                <li class="header-nav-toc-item c-toc">
+                                    <a href="#">
+                                        <h2 class="c-toc-en">MENU</h2>
+                                        <p class="c-toc-jp">メニュー</p>
+                                    </a>
+                                </li>
+                                <li class="header-nav-toc-item c-toc">
+                                    <a href="#">
+                                        <h2 class="c-toc-en">ACCESS</h2>
+                                        <p class="c-toc-jp">アクセス</p>
+                                    </a>
+                                </li>
+                                <li class="header-nav-toc-item c-toc">
+                                    <a href="#">
+                                        <h2 class="c-toc-en">CONTACT</h2>
+                                        <p class="c-toc-jp">お問い合わせ</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="header-nav-info">
+                                <div class="header-nav-opening-hours header-nav-info-item c-open">
+                                    <h3 class="c-open-title">営業時間</h3>
+                                    <p class="c-open-text">- CAFE 9:30-20:00 （19:00 L.O.）</p>
+                                    <p class="c-open-text">- LUNCH 11:30-16:00 （15:00 L.O.）</p>
+                                    <p class="c-open-text">- DINNER 18:00-20:00 （19:00 L.O.）</p>
+                                </div>
+                                <div class="header-nav-business-days header-nav-info-item c-business">
+                                    <h3 class="c-business-title">営業日</h3>
+                                    <p class="c-business-text">月・火・水・木・金曜日</p>
+                                </div>
+                                <div class="header-nav-closed-on header-nav-info-item c-closed">
+                                    <h3 class="c-closed-title">定休日</h3>
+                                    <p class="c-closed-text">土・日・祝日</p>
+                                </div>
+                                <div class="header-nav-adress header-nav-info-item c-adress">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <p class="c-adress-text">〒180-0004<br>
+                                        東京都武蔵野市吉祥寺本町１丁目１０−８<br>大石ビル3F
+                                    </p>
+                                </div>
+                                <div class="header-nav-tel header-nav-info-item c-tel">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <p class="c-tel-text">0422-23-7144</p>
+                                </div>
+                                <div class="header-nav-reservation header-nav-info-item c-reservation">
+                                    <a href="#">
+                                        <p>ご予約はこちらから</p>
+                                        <i class="fa-solid fa-phone"></i>
+                                    </a>
+                                </div>
+                                <div class="header-nav-online-shop header-nav-info-item c-shopping">
+                                    <a href="#">
+                                        <p>ONLINE SHOP</p>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </div>
+                                <div class="header-nav-sns-icon header-nav-info-item">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- サイド -->
+            <aside id="side-banner" class="side-banner">
+                <!-- サイドバナー -->
+                <div class="side-banner-container">
+                    <div id="side-reservation" class="side-reservation">
+                        <a href="#">
+                            <p>ご予約はこちらから<i class="fa-solid fa-phone"></i></p>
+                        </a>
+                    </div>
+                    <div id="side-shopping-icon" class="side-shopping-icon">
+                        <a href="#">
+                            <p><i class="fa-solid fa-cart-shopping"></i><br>online<br>shopping</p>
+                        </a>
+                    </div>
+                    <div id="side-page-top" class="side-page-top" >
+                        <a href="#">
+                            <p>PAGE TOP</p><img src="img/icon.png">
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- メイン -->
+            <main>
+                <!-- トップページ -->
+                <section class="top" id="top">
+                    <div class="top-hero">
+                        <div class="top-hero-bg">
+                            <div class="top-hero-slider-pc">
+                                <div class="top-hero-slider-pc-item"><img src="img/hero_01-1.jpg" alt="" width="1920px" height="947px"></div>
+                                <div class="top-hero-slider-pc-item"><img src="img/hero_02-1.jpg" alt="" width="1920px" height="947px"></div>
+                                <div class="top-hero-slider-pc-item"><img src="img/hero_03-1.jpg" alt="" width="1920px" height="947px"></div>
+                            </div>
+                            <div class="top-hero-slider-sp">
+                                <div class="top-hero-slider-sp-item"><img src="img/hero_01-2.jpg" alt="" width="430px" height="867px"></div>
+                                <div class="top-hero-slider-sp-item"><img src="img/hero_02-2.jpg" alt="" width="430px" height="867px"></div>
+                                <div class="top-hero-slider-sp-item"><img src="img/hero_03-2.jpg" alt="" width="430px" height="867px"></div>
+                            </div>
+                        </div>
+                        <div class="top-hero-news">
+                            <div class="top-hero-news-container">
+                                <h2 class="top-hero-news-title">NEWS</h2>
+                                <ul class="top-hero-news-slider">
+                                    <li class="top-hero-news-item"><a href="#"><span>2021.11.01</span>新メニューが追加されました。</a></li>
+                                    <li class="top-hero-news-item"><a href="#"><span>2021.11.02</span>リニューアルオープンしました。</a></li>
+                                    <li class="top-hero-news-item"><a href="#"><span>2021.11.03</span>イベント開始のお知らせ</a></li>
+                                </ul>
+                                <div class="top-hero-news-button"><a href="#"><span></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-logo">
+                        <div class="top-logo-container">
+                            <h1 class="top-logo-title">
+                                Established 2026<br>
+                                Coffee & Conversation
+                            </h1>
+                            <p class="top-logo-subtitle">
+                                Welcome to Lita Cafe<br>
+                                Product by Litalico Works
+                            </p>
+                            <p class="top-logo-open">
+                                - CAFE 9:30-20:00 （19:00 L.O.）<br>
+                                - LUNCH 11:30-16:00 （15:00 L.O.）<br>
+                                - DINNER 18:00-20:00 （19:00 L.O.）
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!--コンセプト-->
+                <div class="l-area">
+                    <section class="concept l-section" id="concept">
+                        <div class="concept-container l-container">
+                            <div class="concept-title c-title-left">
+                                <div class="concept-title-wrapper c-title-wrapper fadeUpTrigger">
+                                    <h2 class="concept-title-en c-title-en">CONCEPT</h2>
+                                    <p class="concept-title-jp c-title-jp">コンセプト</p>
+                                </div>
+                                <img src="img/img_border.png" width="1355px" height="29px" alt="見出し線" class="c-title-border">
+                            </div>
+                            <div class="concept-content l-content">
+                                <div class="concept-left flex delayScroll">
+                                    <div class="concept-heading delayBox">
+                                        <h3>ほっとひと息できる、</h3>
+                                        <h3>癒しと開放感のあるカフェ</h3>
+                                    </div>
+                                    <div class="concept-text flex delayScroll">
+                                        <p class="delayBox">吉祥地駅から徒歩5分の場所にある「LitaCafe」。<br>
+                                        店内は懐かしさと温もりにあふれ、<br>スイーツや軽食を楽しみながらゆったりとくつろぐことができます。</p>
+                                        <p class="delayBox">カフェラテやエスプレッソなどの本格的なコーヒーメニューだけではなく、香り高い紅茶もオススメの一品。</p>
+                                        <p class="delayBox">ご一緒に手作りチーズケーキやシフォンケーキなどのスイーツもご用意しています。<br>
+                                        おひとりさまでも、デートでも、気軽にお越しください。<br>
+                                        お待ちしております！
+                                        </p>
+                                    </div>
+                                    <div class="concept-button l-button">
+                                        <a href="#" alt="#" class="c-button"><span>view more</span></a>
+                                    </div>
+                                </div>
+                                <div class="concept-right">
+                                    <ul class="concept-list">
+                                        <li class="concept-item"><img src="img/img_concept_01.jpg" alt="" width="350px" height="230px"></li>
+                                        <li class="concept-item"><img src="img/img_concept_02.jpg" alt="" width="350px" height="230px"></li>
+                                        <li class="concept-item"><img src="img/img_concept_03.jpg" alt="" width="350px" height="230px"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--ニュース-->
+                    <section class="news l-section" id="news">
+                        <div class="news-container l-container">
+                            <div class="news-title c-title-left">
+                                <div class="news-title-wrapper c-title-wrapper fadeUpTrigger">
+                                    <h2 class="news-title-en c-title-en">NEWS</h2>
+                                    <p class="news-title-jp c-title-jp">ニュース</p>
+                                </div>
+                                <img src="img/img_border.png" width="1355px" height="29px" alt="見出し線" class="c-title-border">
+                            </div>
+                            <div class="news-content l-content">
+                                <ul class="news-list flex delayScroll">
+                                    <li class="news-item delayBox">
+                                        <a href="#">
+                                            <img src="img/img_news_01.jpg" width="240px" height="170px" class="news-item-thumb">
+                                            <div class="news-item-text">
+                                                <h3>お知らせ</h3>
+                                                <p>新メニューが追加されました</p>
+                                                <p><time datetime="2026-02-10">2026.02.10</time></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="news-item delayBox">
+                                        <a href="#">
+                                            <img src="img/img_news_02.jpg" width="240px" height="170px" class="news-item-thumb">
+                                            <div class="news-item-text">
+                                                <h3>お知らせ</h3>
+                                                <p>リニューアルオープンしました</p>
+                                                <p><time datetime="2026-02-10">2026.02.10</time></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="news-item delayBox">
+                                        <a href="#">
+                                            <img src="img/img_news_03.jpg" width="240px" height="170px" class="news-item-thumb">
+                                            <div class="news-item-text">
+                                                <h3><span>イベント</span></h3>
+                                                <p>イベント開催のお知らせ</p>
+                                                <p><time datetime="2026-02-10">2026.02.10</time></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="news-item delayBox">
+                                        <a href="#">
+                                            <img src="img/img_news_04.jpg" width="240px" height="170px" class="news-item-thumb">
+                                            <div class="news-item-text">
+                                                <h3>お知らせ</h3>
+                                                <p>年末年始の休業について</p>
+                                                <p><time datetime="2026-02-10">2026.02.10</time></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="news-button l-button-right">
+                                <a href="#" alt="#" class="c-button"><span>view more</span></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!--ギャラリー-->
+                <section class="gallery">                        
+                    <ul class="gallery-slider" dir="rtl">
+                        <li><img src="img/img_gallery_01.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_02.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_03.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_04.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_05.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_06.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_07.jpg" alt="" loading="lazy"></li>
+                    </ul>
+                </section>
+                
+                <!--メニュー-->
+                <div class="l-area">
+                    <section class="menu l-section" id="menu">
+                        <div class="menu-container l-container">
+                            <div class="menu-title c-title-left">
+                                <div class="menu-title-wrapper c-title-wrapper fadeUpTrigger">
+                                    <h2 class="menu-title-en c-title-en">MENU</h2>
+                                    <p class="menu-title-jp c-title-jp">メニュー</p>
+                                </div>
+                                <img src="img/img_border.png" width="1355px" height="29px" alt="見出し線" class="c-title-border">
+                            </div>
+                            <div class="menu-content l-content">
+                                <div class="menu-cafe menu-wrapper">
+                                    <h3 class="menu-cafe-heading menu-wrapper-heading">cafe menu</h3>
+                                    <p class="menu-cafe-open menu-wrapper-open">-9:30-20:00(19:00 L.O.)</p>
+                                    <ul class="menu-cafe-list menu-wrapper-list">
+                                        <li class="menu-cafe-item menu-wrapper-item">
+                                            <img src="img/img_menu_01.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>コーヒー&ドーナツセット</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                        <li class="menu-cafe-item menu-wrapper-item">
+                                            <img src="img/img_menu_02.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>クラッカー</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                        <li class="menu-cafe-item menu-wrapper-item">
+                                            <img src="img/img_menu_03.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>目玉焼きプレート</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu-lunch menu-wrapper">
+                                    <h3 class="menu-lunch-heading menu-wrapper-heading">lunch menu</h3>
+                                    <p class="menu-lunch-open menu-wrapper-open">-11:30-16:00(15:00 L.O.)</p>
+                                    <ul class="menu-lunch-list menu-wrapper-list">
+                                        <li class="menu-lunch-item menu-wrapper-item">
+                                            <img src="img/img_menu_04.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>パン&つけあわせ3点セット</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                        <li class="menu-lunch-item menu-wrapper-item">
+                                            <img src="img/img_menu_05.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>エッグトーストセット</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                        <li class="menu-lunch-item menu-wrapper-item">
+                                            <img src="img/img_menu_06.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>シナモンロール</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu-dinner menu-wrapper">
+                                    <h3 class="menu-dinner-heading menu-wrapper-heading">dinner menu</h3>
+                                    <p class="menu-dinner-open menu-wrapper-open">-18:00-20:00(19:00 L.O.)</p>
+                                    <ul class="menu-dinner-list menu-wrapper-list">
+                                        <li class="menu-dinner-item menu-wrapper-item">
+                                            <img src="img/img_menu_07.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>ミニステーキ</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                        <li class="menu-dinner-item menu-wrapper-item">
+                                            <img src="img/img_menu_08.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>タコス</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                        <li class="menu-dinner-item menu-wrapper-item">
+                                            <img src="img/img_menu_09.jpg" width="257px" height="185px" alt="" class="menu-wrapper-item-thumb">
+                                            <h4>コーヒー&カップケーキセット</h4>
+                                            <p>￥600</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu-drink">
+                                    <h3 class="menu-drink-heading menu-wrapper-heading">drink menu</h3>
+                                    <div class="menu-drink-wrapper">
+                                        <ul class="menu-drink-list">
+                                            <li class="menu-drink-item">アメリカーノ ・・・ ￥450</li>
+                                            <li class="menu-drink-item">カプチーノ ・・・ ￥450</li>
+                                            <li class="menu-drink-item">カフェラテ ・・・ ￥450</li>
+                                            <li class="menu-drink-item">エスプレッソ ・・・ ￥450</li>
+                                        </ul>
+                                        <ul class="menu-drink-list">
+                                            <li class="menu-drink-item">アイスティー ・・・ ￥450</li>
+                                            <li class="menu-drink-item">ホットティー ・・・ ￥450</li>
+                                            <li class="menu-drink-item">レモンスカッシュ ・・・ ￥450</li>
+                                            <li class="menu-drink-item">ココア ・・・ ￥450</li>
+                                        </ul>
+                                        <ul class="menu-drink-list">
+                                            <li class="menu-drink-item">ハーブティー ・・・ ￥450</li>
+                                            <li class="menu-drink-item">アップルティー ・・・ ￥450</li>
+                                            <li class="menu-drink-item">コーラフロート ・・・ ￥450</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-button l-button-right">
+                                <a href="#" alt="#" class="c-button"><span>view more</span></a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--ピックアップ-->
+                    <section class="pic-up l-section" id="pic-up">
+                        <div class="pic-up-container l-container">
+                            <div class="pic-up-title c-title-left">
+                                <div class="pic-up-title-wrapper c-title-wrapper fadeUpTrigger">
+                                    <h2 class="pic-up-title-en c-title-en">PIC UP</h2>
+                                    <p class="pic-up-title-jp c-title-jp">おすすめメニュー</p>
+                                </div>
+                                <img src="img/img_border.png" width="1355px" height="29px" alt="見出し線" class="c-title-border">
+                            </div>
+                            <div class="pic-up-content l-content">
+                                <ul class="pic-up-list pic-up-slider">
+                                    <li class="pic-up-item pic-up-item--gold">
+                                        <a href="#">
+                                            <div class="pic-up-item-dot"><span></span></div>
+                                            <img src="img/img_pick-up_01.jpg" class="pic-up-item-thumb" width="200px" height="143px">
+                                            <h3 class="pic-up-item-title">サンプルテキスト</h3>
+                                            <p class="pic-up-item-price">¥400</p>
+                                            <p class="pic-up-item-text">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+                                        </a>
+                                    </li>
+                                    <li class="pic-up-item pic-up-item--brown">
+                                        <a href="#">
+                                            <div class="pic-up-item-dot"><span></span></div>
+                                            <img src="img/img_pick-up_02.jpg" class="pic-up-item-thumb" width="200px" height="143px">
+                                            <h3 class="pic-up-item-title">サンプルテキスト</h3>
+                                            <p class="pic-up-item-price">¥400</p>
+                                            <p class="pic-up-item-text">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+                                        </a>
+                                    </li>
+                                    <li class="pic-up-item pic-up-item--gold">
+                                        <a href="#">
+                                            <div class="pic-up-item-dot"><span></span></div>
+                                            <img src="img/img_pick-up_03.jpg" class="pic-up-item-thumb" width="200px" height="143px">
+                                            <h3 class="pic-up-item-title">サンプルテキスト</h3>
+                                            <p class="pic-up-item-price">¥400</p>
+                                            <p class="pic-up-item-text">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+                                        </a>
+                                    </li>
+                                    <li class="pic-up-item pic-up-item--brown">
+                                        <a href="#">
+                                            <div class="pic-up-item-dot"><span></span></div>
+                                            <img src="img/img_pick-up_01.jpg" class="pic-up-item-thumb" width="200px" height="143px">
+                                            <h3 class="pic-up-item-title">サンプルテキスト</h3>
+                                            <p class="pic-up-item-price">¥400</p>
+                                            <p class="pic-up-item-text">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+                                        </a>
+                                    </li>
+                                    <li class="pic-up-item pic-up-item--gold">
+                                        <a href="#">
+                                            <div class="pic-up-item-dot"><span></span></div>
+                                            <img src="img/img_pick-up_02.jpg" class="pic-up-item-thumb" width="200px" height="143px">
+                                            <h3 class="pic-up-item-title">サンプルテキスト</h3>
+                                            <p class="pic-up-item-price">¥400</p>
+                                            <p class="pic-up-item-text">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+                                        </a>
+                                    </li>
+                                    <li class="pic-up-item pic-up-item--brown">
+                                        <a href="#">
+                                            <div class="pic-up-item-dot"><span></span></div>
+                                            <img src="img/img_pick-up_03.jpg" class="pic-up-item-thumb" width="200px" height="143px">
+                                            <h3 class="pic-up-item-title">サンプルテキスト</h3>
+                                            <p class="pic-up-item-price">¥400</p>
+                                            <p class="pic-up-item-text">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+                                        </a>
+                                    </li>
+                                    <li class="pic-up-item pic-up-item--gold">
+                                        <a href="#">
+                                            <div class="pic-up-item-dot"><span></span></div>
+                                            <img src="img/img_pick-up_01.jpg" class="pic-up-item-thumb" width="200px" height="143px">
+                                            <h3 class="pic-up-item-title">サンプルテキスト</h3>
+                                            <p class="pic-up-item-price">¥400</p>
+                                            <p class="pic-up-item-text">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+                                        </a>
+                                    </li>
+                                    <li class="pic-up-item pic-up-item--brown">
+                                        <a href="#">
+                                            <div class="pic-up-item-dot"><span></span></div>
+                                            <img src="img/img_pick-up_02.jpg" class="pic-up-item-thumb" width="200px" height="143px">
+                                            <h3 class="pic-up-item-title">サンプルテキスト</h3>
+                                            <p class="pic-up-item-price">¥400</p>
+                                            <p class="pic-up-item-text">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pic-up-button l-button-right">
+                                <a href="#" alt="#" class="c-button"><span>view more</span></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!--ギャラリー-->
+                <section class="gallery">
+                    <ul class="gallery-slider" dir="rtl">
+                        <li><img src="img/img_gallery_08.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_09.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_10.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_11.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_12.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_13.jpg" alt="" loading="lazy"></li>
+                        <li><img src="img/img_gallery_14.jpg" alt="" loading="lazy"></li>
+                    </ul>                        
+                </section>
+
+                <!--アクセス-->
+                <div class="l-area">
+                    <section class="access l-section" id="access">
+                        <div class="access-container l-container">
+                            <div class="access-title c-title-left">
+                                <div class="access-title-wrapper c-title-wrapper fadeUpTrigger">
+                                    <h2 class="access-title-en c-title-en">ACCESS</h2>
+                                    <p class="access-title-jp c-title-jp">アクセス</p>
+                                </div>
+                                <img src="img/img_border.png" width="1355px" height="29px" alt="見出し線" class="c-title-border">
+                            </div>
+                            <div class="access-content l-content">
+                                <div class="access-left flex delayScroll">
+                                    <div class="access-opening-hours access-info c-open delayBox">
+                                        <h3 class="c-open-title">営業時間</h3>
+                                        <p class="c-open-text">- CAFE 9:30-20:00 （19:00 L.O.）</p>
+                                        <p class="c-open-text">- LUNCH 11:30-16:00 （15:00 L.O.）</p>
+                                        <p class="c-open-text">- DINNER 18:00-20:00 （19:00 L.O.）</p>
+                                    </div>
+                                    <div class="access-business-days access-info c-business delayBox">
+                                        <h3 class="c-business-title">営業日</h3>
+                                        <p class="c-business-text">月・火・水・木・金曜日</p>
+                                    </div>
+                                    <div class="access-closed-on access-info c-closed delayBox">
+                                        <h3 class="c-closed-title">定休日</h3>
+                                        <p class="c-closed-text">土・日・祝日</p>
+                                    </div>
+                                    <div class="access-adress-tel access-info delayBox">
+                                        <div class="access-adress c-adress">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <p class="c-adress-text">
+                                                〒180-0004<br>
+                                                東京都武蔵野市吉祥寺本町1丁目10-8大石ビル3F
+                                            </p>
+                                        </div>
+                                        <div class="access-tel c-tel">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p class="c-tel-text">0422-23-7144</p>
+                                        </div>
+                                    </div>
+                                    <div class="access-button l-button-left">
+                                        <a href="#" alt="#" class="c-button"><span>view more</span></a>
+                                    </div>
+                                </div>
+                                <div class="access-right">
+                                    <div class="access-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.825646062215!2d139.576723151283!3d35.70590793612761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018efa4da33e9d1%3A0xd7dc80dccd925ca2!2zTElUQUxJQ0_jg6_jg7Pjg4Djg7wg5ZCJ56Wl5a-6!5e0!3m2!1sja!2sjp!4v1562567414442!5m2!1sja!2sjp" width="469px" height="595px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--FAQ-->
+                    <section class="faq l-section" id="FAQ">
+                        <div class="faq-container l-container">
+                            <div class="faq-title c-title-left">
+                                <div class="faq-title-wrapper c-title-wrapper fadeUpTrigger">
+                                    <h2 class="faq-title-en c-title-en">FAQ</h2>
+                                    <p class="faq-title-jp c-title-jp">よくあるご質問</p>
+                                </div>
+                                <img src="img/img_border.png" width="1355px" height="29px" alt="見出し線" class="c-title-border">
+                            </div>
+                            <div class="faq-content l-content">
+                                <ul class="faq-list flex delayScroll">
+                                    <li class="faq-item delayBox">
+                                        <div class="faq-item-wrapper">
+                                            <div class="faq-item-title">
+                                                <span>Q</span><h3>席の予約はできますか？</h3>
+                                            </div>
+                                            <div class="faq-item-hidden">
+                                                <div class="faq-item-answer">
+                                                    <span>A</span><p>はい、承っております。お電話（0422-23-7144）またはオンライン予約フォームにてご希望の日時と人数をお知らせください。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="faq-item delayBox">
+                                        <div class="faq-item-wrapper">
+                                            <div class="faq-item-title">
+                                                <span>Q</span><h3>テイクアウトはできますか？</h3>
+                                            </div>
+                                            <div class="faq-item-hidden">
+                                                <div class="faq-item-answer">
+                                                    <span>A</span><p>はい、ドリンクや一部のフードメニューはテイクアウトが可能です。店頭またはお電話にてご注文いただけます。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="faq-item delayBox">
+                                        <div class="faq-item-wrapper">
+                                            <div class="faq-item-title">
+                                                <span>Q</span><h3>Wi-Fiは利用できますか？また、電源はありますか？</h3>
+                                            </div>
+                                            <div class="faq-item-hidden">
+                                                <div class="faq-item-answer">
+                                                    <span>A</span><p>店内では無料の高速Wi-Fiをご利用いただけます。また、一部のカウンター席には電源コンセントを完備しておりますので、PC作業や充電にご利用ください。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="faq-item delayBox">
+                                        <div class="faq-item-wrapper">
+                                            <div class="faq-item-title">
+                                                <span>Q</span><h3>喫煙は可能ですか？</h3>
+                                            </div>
+                                            <div class="faq-item-hidden">
+                                                <div class="faq-item-answer">
+                                                    <span>A</span><p>申し訳ありません。店内は全席禁煙となっております。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="faq-button l-button-right">
+                                <a href="#" alt="#" class="c-button"><span>view more</span></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- オンラインショップ&お問い合わせフォーム -->
+                <div class="online-shop-contact-area">
+                    <!-- オンラインショップ -->
+                    <section class="online-shop" id="online-shop">
+                        <div class="online-shop-container">
+                            <div class="online-shop-title c-title-center">
+                                <h2 class="online-shop-title-en c-title-en">online shop</h2>
+                                <p class="online-shop-title-jp c-title-jp">オンラインショップはコチラから</p>
+                            </div>
+                            <div class="online-shop-content">
+                                <div class="online-shop-button">
+                                    <a href="#">
+                                        <p class="online-shop-button-text">オンラインショップ</p>
+                                        <i class="fa-solid fa-cart-shopping online-shop-button-icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- お問い合わせ -->
+                    <section class="contact" id="contact">
+                        <div class="contact-container">
+                            <div class="contact-title c-title-center">
+                                <h2 class="contact-title-en c-title-en">contact</h2>
+                                <p class="contact-title-jp c-title-jp">お問い合わせはコチラから</p>
+                            </div>
+                            <div class="contact-content">
+                                <div class="contact-button">
+                                    <a href="#">
+                                        <p class="contact-button-text">お問い合わせフォーム</p>
+                                        <i class="fa-regular fa-envelope contact-button-icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+            <!--フッター-->
+            <footer class="footer" id="footer">
+                <div class="footer-copyright">
+                    <small>&copy; 2026 LITALICO Inc.</small>
+                </div>
+            </footer>
+		</div>
+    </body>
+</html>
