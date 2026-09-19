@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/* ========================================
+COMMON
+======================================== */
+.l-section {
+	padding: 20px 10px;
+}
+.l-container {
+	padding: 0 20px;
+	border-radius: 0;
+}
+.l-content  {
+	margin: 0;
+}
+.l-button-right {
+	margin: 60px 0;
+	text-align: center;
+}
+l-button-left {
+	margin: 60px 0;
+	text-align: center;
+}
+
+/* ========================================
+COMPONENT
+======================================== */
+.c-title-left {
+	margin: 50px 0;
+	flex-direction: column;
+}
+.c-title-wrapper {
+	display: block;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+.c-title-border {
+	display: block;
+	width: 100%;
+}
+.c-title-jp {
+	padding: 10px 0;
+}
+
+/* ========================================
+HEADER
+======================================== */
+.header-logo {
+	width: 120px;
+}
+.header-sns-list {
+	right: 80px;
+}
+.header-sns-list li {
+	margin: 0 10px;
+}
+.header-sns-list li .fa-brands {
+	font-size: 30px;
+}
+.header-nav-container {
+	flex-direction: column;
+}
+.header-nav {
+	width: 100vw;
+}
+.header-nav-opening-hours,
+.header-nav-business-days,
+.header-nav-closed-on,
+.header-nav-adress,
+.header-nav-tel {
+	display: none;
+}
+.header-nav-reservation,
+.header-nav-online-shop {
+	margin: 10px 80px;
+}
+
+/* ========================================
+ASIDE
+======================================== */
+.side-reservation {
+	display: none;
+}
+.side-shopping-icon {
+	display: none;
+}
+
+/* ========================================
+TOP
+======================================== */
+/*　------------------
+TOP > メイン > 背景
+------------------　*/
+.top-hero-slider-pc {
+	display: none;
+}
+.top-hero-slider-sp {
+	display: block;
+}
+.top-hero-slider-sp-item {
+	background-color: var(--base-color);
+    background-size: cover;
+}
+.top-hero-slider-sp-item img {
+	width: 100vw;
+    height: 90vh;
+	mix-blend-mode: multiply;
+	opacity: 0.8;
+}
+
+/*　------------------
+TOP > メイン > ドットナビゲーション
+------------------　*/
+.slick-dots {
+	display: none;
+	position: static;
+}
+.slick-dots button {
+	display: none;
+}
+/*　------------------
+TOP > メイン > ニュースティッカー
+------------------ */
+.top-hero-news {
+	justify-content: center;
+}
+.top-hero-news-container {
+	max-width: 98vw;
+	padding: 0;
+	margin: 0;
+}
+.top-hero-news-item {
+	font-size: 8px;
+}
+.top-hero-news-item a span {
+	font-size: 12px;
+}
+.top-hero-news-title {
+	font-size: 12px;
+}
+.bx-wrapper {
+	width: 90%;
+}
+.top-hero-news-button {
+	right: 13px;
+}
+
+/*　------------------
+TOP > ロゴ
+------------------　*/
+.top-logo-container {
+	bottom: 20px;
+	left: 10px;
+}
+.top-logo-title {
+	font-size: 18px;
+	letter-spacing: 4px;
+}
+.top-logo-subtitle {
+	font-size: 8px;
+	letter-spacing: 3px;
+}
+.top-logo-open {
+	display: none;
+}
+
+/* ========================================
+CONCEPT
+======================================== */
+.concept-content {
+	flex-direction: column;
+}
+.concept-left {
+	width: 100%;
+	flex-direction: column;
+}
+.concept-right {
+	width: 100%;
+	flex-direction: column;
+}
+.concept-button {
+	position: static;
+	display: block;
+	margin: 70px 0;
+	text-align: center;
+}
+.concept-heading {
+	margin: 0;
+}
+.concept-heading h3 {
+	font-size: 25px;
+}
+.concept-list li {
+	margin: 0 0 50px 0;
+}
+
+/* ========================================
+NEWS
+======================================== */
+.news-list {
+	flex-direction: column;
+}
+.news-item {
+	margin: 20px 0 0 0;
+}
+.news-item-thumb {
+	width: 100%;
+}
+.news-item-text h3 {
+	font-size: 18px;
+	margin: 5px 0;
+}
+.news-item-text p {
+	font-size: 15px;
+}
+
+/* ========================================
+MENU
+======================================== */
+.menu-wrapper-list {
+	flex-direction: column;
+	text-align: center;
+}
+.menu-wrapper-item {
+	margin-bottom: 20px;
+}
+.menu-wrapper-heading {
+	text-align: center;
+}
+.menu-wrapper-open {
+	text-align: center;
+	border: none;
+}
+.menu-drink-wrapper {
+	flex-direction: column;
+	padding: 0;
+}
+.menu-drink-list {
+	margin: 20px 0;
+}
+/* ========================================
+PIC UP
+======================================== */
+.pic-up-slider {
+	width: 380px;
+	height: 300px;
+	border-radius: 0;
+	background: none;
+	padding: 0 20px;
+}
+.pic-up-item {
+	width: 400px;
+	height: 300px;
+}
+.pic-up-item--brown {
+	background: var(--sub-color) url("../img/texture.jpg") no-repeat center / cover;
+}
+.slick-prev, 
+.slick-next {
+	top: 130px;
+}
+.slick-prev {
+	left: 0;
+}
+.slick-next {
+	right: 0;
+}
+
+/* ========================================
+ACCESS
+======================================== */
+.access-content {
+	flex-direction: column;
+}
+.access-left {
+	width: 100%;
+}
+.access-right {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+.access-map {
+	width: 100%;
+	height: 300px;
+}
+.access-map iframe {
+	width: 100%;
+	height: 300px;
+}
+.access-button {
+	position: static;
+	text-align: center;
+	margin: 60px 0;
+}
+
+/* ========================================
+FAQ
+======================================== */
+.faq-item-title {
+	padding: 25px 85px 25px 25px;
+}
+
+/* ========================================
+ONLINE SHOP & CONTACT
+======================================== */
+.online-shop-contact-area {
+	flex-direction: column;
+}
+
+/* ========================================
+ONLINE SHOP
+======================================== */
+.online-shop {
+	width: 100%;
+	padding: 60px 0;
+}
+.online-shop-container {
+	padding: 0;
+	border: none;
+}
+.online-shop-title-en {
+	font-size: 28px;
+}
+.online-shop-button-text {
+	font-size: 15px;
+}
+.online-shop a {
+	width: 500px;
+	padding: 10px 0;
+}
+
+/* ========================================
+CONTACT
+======================================== */
+.contact {
+	width: 100%;
+	padding: 60px 0;
+}
+.contact-container {
+	padding: 0;
+	border: none;
+}
+.contact-title-en {
+	font-size: 28px;
+}
+.contact-button-text {
+	font-size: 15px;
+}
+.contact-button a {
+	width: 500px;
+	padding: 10px 0;
+}
